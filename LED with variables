@@ -1,0 +1,15 @@
+int LEDPin=13;
+int waitTime=50;
+
+void setup() {
+  // put your setup code here, to run once:
+pinMode(13,OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+digitalWrite(LEDPin,HIGH);
+delay(waitTime);
+digitalWrite(LEDPin,LOW);
+delay(waitTime);
+}
