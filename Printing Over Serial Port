@@ -1,0 +1,37 @@
+int redLEDPin=8;  //Declaring redLEDPin as an int and set it to 8
+int yellowLEDPin=7;
+int redTimeOn=500;
+int redTimeOff=250;
+int yellowTimeOn=500;
+int yellowTimeOff=250;
+int timesBlinkRed=10;
+int timesBlinkYellow=2;
+ 
+void setup() {
+  // put your setup code here, to run once:
+Serial.begin(9600);
+pinMode(redLEDPin,OUTPUT);
+pinMode(yellowLEDPin,OUTPUT);
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  Serial.println("  TRUWAY LABS Red-LED Blinking # ");
+for (int j=1; j<=timesBlinkRed; j=j+1) { 
+  Serial.println(j);
+  digitalWrite(redLEDPin, HIGH);
+  delay(redTimeOn);
+  digitalWrite(redLEDPin, LOW);
+  delay(redTimeOff);
+}
+Serial.println("  TRUWAY LABS Yellow-LED Blinking # ");
+for (int j=1; j<=timesBlinkYellow; j=j+1) { 
+  Serial.println(j);
+  digitalWrite(yellowLEDPin, HIGH);
+  delay(yellowTimeOn);
+  digitalWrite(yellowLEDPin, LOW);
+  delay(yellowTimeOff);
+}
+
+}
