@@ -1,0 +1,30 @@
+int redLEDPin=8;  //Declaring redLEDPin as an int and set it to 8
+int yellowLEDPin=7; //Declaring redLEDPin as an int and set it to 7
+int redTimeOn=500;
+int redTimeOff=250;
+int yellowTimeOn=500;
+int yellowTimeOff=250;
+
+
+void setup() {
+  // put your setup code here, to run once:
+pinMode(redLEDPin,OUTPUT);
+pinMode(yellowLEDPin,OUTPUT);
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+for (int j=1; j<=5; j=j+1) { 
+  digitalWrite(redLEDPin, HIGH);
+  delay(redTimeOn);
+  digitalWrite(redLEDPin, LOW);
+  delay(redTimeOff);
+}
+
+  digitalWrite(yellowLEDPin, HIGH);
+  delay(yellowTimeOn);
+  digitalWrite(yellowLEDPin, LOW);
+  delay(yellowTimeOff);
+
+}
